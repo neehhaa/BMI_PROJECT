@@ -1,18 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LLMain"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:gravity="center"
+    android:orientation="vertical">
 
-    <TextView
+    <EditText
+        android:id="@+id/ed_Weight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:ems="12"
+        android:hint="@string/hint_weight"
+        android:inputType="number" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/ed_Height_ft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="12"
+        android:hint="@string/hint_height_ft"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/ed_Height_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="12"
+        android:hint="@string/hint_height_in"
+        android:inputType="number"/>
+    <Button
+        android:id="@+id/btn_cal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:text="Calculate BMI"/>
+
+     <TextView
+         android:id="@+id/txt_Result"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="RESULT"
+         android:textSize="21sp"
+         android:textStyle="bold"
+         android:layout_marginTop="11dp"/>
+</LinearLayout>
